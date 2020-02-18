@@ -5,10 +5,12 @@
 Tailored is a client to photographer site built to match clients to their perfect photographer based on location, price point, and expertise. Based on these criteria, users will be able to search the registered database based on their needs. Users will also be able to "search all" to view all available photographers beyond any set criteria. This will be developed using Python and Django.  
 
 ## Project Links
+- yet to deploy 
 
 ## Wireframes
+[Wireframe](https://xd.adobe.com/view/dc59ec26-1690-401f-5bf2-36ad1635f269-aa68/)
 
-## Designs:
+<!-- ## Designs: -->
 
 
 - client request to design
@@ -22,10 +24,11 @@ Tailored is a client to photographer site built to match clients to their perfec
 - Photographer login -- authentication  
 - browse all photographers
 - User home
-- Photographer home/ profile -- Individual photographer apps/ pages
+- Photographer home/ profile -- Individual photographer apps/ pages. This will also have a separate booking page
 - Searchabilty using ElasticSearch 
 
 ### Post-MVP:
+- Extensive searchabilty using ElasticSearch 
 
 ## Structure:
 
