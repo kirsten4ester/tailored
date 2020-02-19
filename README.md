@@ -13,22 +13,24 @@ Tailored is a client to photographer site built to match clients to their perfec
 <!-- ## Designs: -->
 
 
-- client request to design
+<!-- - client request to design -->
 
 ## MVP/ Post-MVP
 
 ### MVP:
-- homepage -- pic carausel, login/signup links, "browse all" button/ link
-- User login -- authentication 
-- User signup
+- landing homepage -- pic carausel, login/signup links, "browse all" button/ link
 - Photographer login -- authentication  
 - browse all photographers
-- User home
 - Photographer home/ profile -- Individual photographer apps/ pages. This will also have a separate booking page
-- Searchabilty using ElasticSearch 
 
 ### Post-MVP:
-- Extensive searchabilty using ElasticSearch 
+- User/Client side
+- Extensive searchabilty using ElasticSearch
+
+- User/client login -- authentication 
+- User/client signup
+- User/client home page
+- Searchabilty using ElasticSearch 
 
 ## Structure:
 
@@ -36,21 +38,24 @@ Tailored is a client to photographer site built to match clients to their perfec
 
 | Template  |                          Description                          |
 | --------------- | :-----------------------------------------------------------: |
-| Home          |           Landing page where user can click to browse/ search all photographers, click to advanced search, click to login, click to sign up  |
-| Login         |           User can log in to account          |
-| Sign Up       |           User sign up for account            |
-| Browse All        |       All photographers listed accounts linking to their homepage without any search criteria         |
-| Advanced Search   |       User can search for photographers based on zip, price, specialty -- user authentication         |
-| User Home         |       User's saved/ favorited photographers, account details              |
+| Landing       |           Landing page where user can click to browse/ search all photographers, click to advanced search, click to login, click to sign up  |
+<!-- | Login         |           User can log in to user account          |
+| Sign Up       |           User sign up for user account            | -->
+| Browse All        |       GATEWAYED -- only allows authenticated users to enter. All photographer's listed accounts linking to their homepage without any search criteria         |
+<!-- | Advanced Search   |       GATEWAYED -- only allows authenticated users to enter. User can search for photographers based on zip, price, specialty -- user authentication         | -->
+<!-- | User Home         |       User's saved/ favorited photographers, account details              | -->
 | Photographer Home |       Photographer's homepage/ sitepage        |
 | Book photographer |       Clients can contact photographer and book with photographer through page.       |
 
+## Architecture:
+APP 1: Tailored
+models: Photographer, Shoots
 
 ## Time Frames
 
 | Component                       | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Planning & Wireframing          |    H     |      3hrs       |      hrs       |
+| ------------------------------- | :------: | :------------:  | :-----------:  | :---------: |
+| Planning & Wireframing          |    H     |      3hrs       |      hrs       |     hrs     |
 | Build file structure            |    H     |      2hrs       |      hrs       |     hrs     |
 | Views                           |    H     |      4hrs       |      hrs       |     hrs     |
 | Templates                       |    H     |      2hrs       |      hrs       |     hrs     |
@@ -61,6 +66,10 @@ Tailored is a client to photographer site built to match clients to their perfec
 | Documentation                   |    H     |      3hrs       |      hrs       |     hrs     |
 | Total                           |    H     |       hrs       |      hrs       |     hrs     |
 
+## Technologies Used
+- Python
+- Django 
+
 ## Additional Libraries
-- Bootstrap
+- Bootstrap / Django Crispy Forms
 - ElasticSearch 
