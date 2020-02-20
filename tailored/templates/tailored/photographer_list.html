@@ -1,0 +1,14 @@
+{% extends 'tailored/base.html' %} 
+{% block content %}
+
+    <h2 class="list-h2">Photographers <a href="{% url 'photographer_create' %}">|| add photographer </a></h2>
+    <ul>
+        {% for photographer in photographers %}
+            <li>
+                <img src="{{photographer.avatar}}" alt="" class="photo" /> <br />
+                <a href="{% url 'photographer_detail' pk=photographer.id %}">{{ photographer.name }}</a><br /><hr/>
+
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
