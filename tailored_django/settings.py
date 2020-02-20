@@ -83,13 +83,12 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tailored',
-        'USER': 'tailoreduser',
-        'PASSWORD': 'tailored',
-        'HOST': 'localhost'
+        'NAME': 'deqp21a9tie95j',
+        'USER': 'rugculuzrkvuqz',
+        'PASSWORD': '18138ce1b6f95192290b0ee40f98ca721f32f71dc26ff55713f2eaf9a1bdb4f9',
+        'HOST': 'ec2-184-72-236-3.compute-1.amazonaws.com'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
