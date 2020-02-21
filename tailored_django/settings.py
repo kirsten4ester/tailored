@@ -18,20 +18,6 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
 
 # Application definition
 
-# LOGIN_URL = 'login'
-# LOGOUT_URL = 'logout'
-# LOGIN_REDIRECT_URL = 'home'
-
-# SOCIAL_AUTH_LOGIN_ERROR_URL = '/settings/'
-# SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/settings/'
-# SOCIAL_AUTH_RAISE_EXCEPTIONS = False
-
-# SOCIAL_AUTH_TWITTER_KEY = 'dwNfmLw7GnN67hF9whZGtIQGI'
-# SOCIAL_AUTH_TWITTER_SECRET = 'nva4hJYyIobvigZL1zM1fACjfCKnJZFPBgqPZLIsNvkijdvi8i'
-
-# SOCIAL_AUTH_FACEBOOK_KEY = '2610306402425959'  # App ID
-# SOCIAL_AUTH_FACEBOOK_SECRET = '7bdc63de6a9e3ba4d6d1b96837f9b355'  # App Secret
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,8 +29,6 @@ INSTALLED_APPS = [
     'tailored',
     'django_extensions',
     'accounts',
-
-    # 'social_django',
 ]
 
 MIDDLEWARE = [
@@ -56,8 +40,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # 'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'tailored_django.urls'
@@ -73,9 +55,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
-                # 'social_django.context_processors.backends',
-                # 'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -116,13 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-# AUTHENTICATION_BACKENDS = (
-#     'social_core.backends.twitter.TwitterOAuth',
-#     'social_core.backends.facebook.FacebookOAuth2',
-
-#     'django.contrib.auth.backends.ModelBackend',
-# )
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

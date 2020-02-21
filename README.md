@@ -19,18 +19,20 @@ Tailored is a client to photographer site built to match clients to their perfec
 
 ### MVP:
 - landing homepage -- pic carausel, login/signup links, "browse all" button/ link
-- Photographer login -- authentication  
+- User login -- authentication  
 - browse all photographers
-- Photographer home/ profile -- Individual photographer apps/ pages. This will also have a separate booking page
-
-### Post-MVP:
-- User/Client side
-- Extensive searchabilty using ElasticSearch
+- Photographer home/ profile -- Individual photographer apps/ pages. 
+- Searchability
 
 - User/client login -- authentication 
 - User/client signup
 - User/client home page
+
+### Post-MVP:
+- User/Client side
+- Extensive searchabilty using ElasticSearch
 - Searchabilty using ElasticSearch 
+- Photographer separate booking page
 
 ## Structure:
 

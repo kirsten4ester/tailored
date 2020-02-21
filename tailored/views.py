@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from .models import Photographer, Shoot
-# from .forms import PhotographerForm, ShootForm
+from .forms import PhotographerForm, ShootForm
 from django.contrib.auth.decorators import login_required
 
 def landing(request):
@@ -16,7 +16,6 @@ def photographer_list(request):
 def photographer_detail(request, pk):
     photographer = Photographer.objects.get(id=pk)
     return render(request, 'tailored/photographer_detail.html', {'photographer': photographer})
-
 
 def photographer_create(request):
     if request.method == 'POST':
