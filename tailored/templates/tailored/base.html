@@ -12,22 +12,24 @@
 </head>
 
 <body>
-    <h1>Tailored Shots</h1>
-    <h6>this is base</h6>
-    <nav>
-        <a href="{% url 'photographer_list' %}">Photographers</a>
-        <!-- <a href="{% url 'shoot_list' %}">Shoots</a> -->
+    <h1><a href="{% url 'landing' %}">Tailored Shots</a></h1>
+    <!-- <h6>this is base</h6> -->
+
+
+    <nav class="base-nav">
+        <a href="{% url 'photographer_list' %}">browse all photographers</a>
+        <a href="{% url 'shoot_list' %}">browse all sessions</a>
 
         <div class="user-info">
             {% if user.is_authenticated %} Welcome, {{ user.username }}
             <a href="{% url 'logout' %}">Log out</a>
             {% else %}
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'signup' %}">Signup</a>
+            <a href="{% url 'login' %}">Log in</a>
+            <a href="{% url 'signup' %}">Sign up</a>
             {% endif %}
         </div>
-
     </nav>
+
     {% block content %}{% endblock %}
 
 </body>

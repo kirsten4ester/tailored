@@ -1,18 +1,19 @@
 {% extends 'tailored/base.html' %} 
 {% block content %}
-    <h2>{{ photographer.name }} <a href="{% url 'photographer_edit' pk=photographer.pk %}"> | edit |</a></h2>
-    <h4>{{ photographer.name }} - {{ photographer.location }}</h4>
+    <h2>{{ photographer.name }} </h2>
+    <h4>{{ photographer.name }} | {{ photographer.location }}</h4>
+    <h4>{{ photographer.category }} | {{ photographer.price }}</h4>
 
-    <!-- <img src="{{ photographer.avatar }}" alt="" class="photo"> <br /> -->
+    <img src="{{ photographer.avatar }}" alt="" class="photo"> <br />
 
     <!-- <h4><a href="{{ photographer.bio_url }}">Bio</a></h4> -->
 
-    <!-- <h3>Shoots<a href="{% url 'shoot_create' %}">(+)</a></h3> -->
-    <!-- <ul>
-        {% for creation in photographer.creations.all %}
+    <h3>View <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h3>
+    <ul>
+        {% for shoot in photographer.shoots.all %}
             <li>
-                <a href="{% url 'creation_detail' pk=creation.pk %}">{{ creation.title }} ({{ creation.year_completed }})</a>
+                <a href="{% url 'shoot_detail' pk=shoot.pk %}">{{ shoot.title }} ({{ shoot.photo_url }})</a>
             </li>
         {% endfor %}
-    </ul> -->
+    </ul>
 {% endblock %}
