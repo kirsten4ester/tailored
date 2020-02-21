@@ -15,4 +15,3 @@ urlpatterns = [
     path('shoots/<int:pk>/edit', views.shoot_edit, name='shoot_edit'),
     path('shoots/<int:pk>/delete', views.shoot_delete, name='shoot_delete'),
 ]
-

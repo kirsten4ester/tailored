@@ -16,6 +16,14 @@
         <a href="{% url 'photographer_list' %}">Photographers</a>
         <!-- <a href="{% url 'shoot_list' %}">Shoots</a> -->
 
+        <div class="user-info">
+            {% if user.is_authenticated %} Welcome, {{ user.username }}
+            <a href="{% url 'logout' %}">Log out</a>
+            {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+          </div>
+
     </nav>
     {% block content %}{% endblock %}
 
