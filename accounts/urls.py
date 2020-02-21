@@ -16,7 +16,7 @@ urlpatterns = [
          name='logout'),
     # Sign Up
     path('accounts/signup', views.sign_up, name="signup"),
-    url(r'^oauth/', include('social_django.urls', namespace='social')),
+#     url(r'^oauth/', include('social_django.urls', namespace='social')),
 #     url(r'^settings/$', core_views.settings, name='settings'),
 #     url(r'^settings/password/$', core_views.password, name='password'),
 ]
