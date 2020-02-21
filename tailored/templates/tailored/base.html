@@ -9,27 +9,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tailored Shots</title>
     <link rel="stylesheet" href="{% static 'css/tailored.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tenor+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <h1><a href="{% url 'landing' %}">Tailored Shots</a></h1>
+<body class="base-body">
+
+
+    <h1 class="base-h1"><a href="{% url 'landing' %}">Tailored Shots</a></h1>
     <!-- <h6>this is base</h6> -->
 
 
     <nav class="base-nav">
-        <a href="{% url 'photographer_list' %}">browse all photographers</a>
-        <a href="{% url 'shoot_list' %}">browse all sessions</a>
+        <!-- <a href="{% url 'photographer_list' %}">browse all photographers</a>
+        <a href="{% url 'shoot_list' %}">browse all sessions</a> -->
 
         <div class="user-info">
-            {% if user.is_authenticated %} Welcome, {{ user.username }}
-            <a href="{% url 'logout' %}">Log out</a>
+            {% if user.is_authenticated %} Hey, {{ user.username }}
+            <h4><a href="{% url 'logout' %}">Log out</a></h4>
+            <!-- <h4 class="logout"><a href="{% url 'logout' %}">Log out</a></h4> -->
             {% else %}
             <a href="{% url 'login' %}">Log in</a>
             <a href="{% url 'signup' %}">Sign up</a>
             {% endif %}
         </div>
     </nav>
-
+    <div className="btn-group btn-group-justified">
+        <a href="{% url 'photographer_list' %}">browse all photographers</a>
+        <a href="{% url 'shoot_list' %}">browse all sessions</a>
+    </div>
     {% block content %}{% endblock %}
 
 </body>
