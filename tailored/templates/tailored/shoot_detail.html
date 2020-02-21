@@ -1,0 +1,9 @@
+{% extends 'tailored/base.html' %}
+{% block content %}
+
+<h2>{{ shoot.title }} <a href="{% url 'shoot_edit' pk=song.pk %}">(edit)</a></h2>
+<h3>By: {{ shoot.photographer.name }}</h3>
+
+<!-- Album: {{ shoot.album }} -->
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'tailored/base.html' %}
+{% block content %}
+
+<h2>Photoshoots</h2>
+<ul>
+  {% for shoot in shoots %}
+  <li>
+    <a href="">{{ shoot.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
