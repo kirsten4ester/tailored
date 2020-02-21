@@ -1,19 +1,23 @@
 from django.shortcuts import render, redirect
 
 from .models import Photographer, Shoot
+from django.contrib.auth.decorators import login_required
 # from .forms import PhotographerForm, ShootForm
 
 
 def landing(request):
     return render(request, 'tailored/landing.html')
 
+@login_required
 def photographer_list(request): 
     photographers = Photographer.objects.all()
     return render(request, 'tailored/photographer_list.html', {'photographers': photographers})
 
+@login_required
 def photographer_detail(request, pk):
     photographer = Photographer.objects.get(id=pk)
     return render(request, 'tailored/photographer_detail.html', {'photographer': photographer})
+
 
 def photographer_create(request):
     if request.method == 'POST':
@@ -40,10 +44,12 @@ def photographer_delete(request, pk):
     Photographer.objects.get(id=pk).delete()
     return redirect('photographer_list')
 
+@login_required
 def shoot_list(request):
     shoots = Shoot.objects.all()
     return render(request, 'tailored/shoot_list.html', {'shoots': shoots})
 
+@login_required
 def shoot_detail(request, pk):
     shoot = Shoot.objects.get(id=pk)
     return render(request, 'tailored/shoot_detail.html', {'shoot': shoot})
