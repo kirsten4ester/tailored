@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 
 from .models import Photographer, Shoot
-from django.contrib.auth.decorators import login_required
 # from .forms import PhotographerForm, ShootForm
 
+from django.contrib.auth.decorators import login_required
 
 def landing(request):
     return render(request, 'tailored/landing.html')
