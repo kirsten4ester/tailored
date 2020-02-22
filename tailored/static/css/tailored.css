@@ -1,5 +1,5 @@
 .base-body {
-    padding-top: 10%;
+    /* padding-top: 10%; */
     background-color: black;
     color: white;
     font-family: 'Tenor Sans';
@@ -10,7 +10,7 @@
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 }
 
@@ -20,8 +20,7 @@
     grid-column: 1/ span 3;
     flex-direction: column;
 
-    top: 10px;
-    line-height: 10px;
+    margin-top: 5%;
 
     font-family: 'Syncopate';
     text-transform: uppercase;
@@ -33,26 +32,26 @@
     color: white;
 }
 
+/* force to top/right  2/22 5:45 */
 .user-info {
-    display: flex;
+    display: inline-block;
     grid-row: 1;
     grid-column: 3;
     flex-direction: column;
 
-    top: 10px;
-    left: 10px;
-
-    margin-top: 1%;
-    margin-right: 1%;
+    margin-top: 4%;
+    margin-right: 0;
     color: white;
 }
 
+/* TRYING to remove text decoration  2/22 5:45 */
 .user-info a {
     text-decoration: none;
     padding: 10px;
     color: white;
     text-align: center;
-    display: inline;
+    /* display: inline; */
+    vertical-align: top;
 }
 
 .user-info a:link, a:visited, a:hover, a:active{
@@ -62,6 +61,7 @@
 
 
 /* ---- LOG  ---- */
+/* your "login" button disappeared 2/22 5:45*/
 .log-form {
     display: flex;
     grid-row: 2 / span 3;
@@ -75,7 +75,21 @@
     margin: auto;
 }
 
+p {
+    color: white;
+}
+
+input {
+    background-color: black;
+    color: white;
+    border: solid white 2px;
+    text-align: center;
+    font-variant: small-caps;
+    width: 100px;
+}
+
 /* ---- LANDING PAGE ---- */
+/* still trying to inline your buttons... 2/22 5:45 */
 .landing-div {
     display: flex;
     grid-row: 2 / span 3;
@@ -86,18 +100,98 @@
 }
 
 .btn-group {
-    display: inline-flex;
+    display: flex;
     grid-row: 3;
     grid-column: 1 / span 3;
     flex-direction: column;
 
     background-color: black;
-
-    
     border: solid white 2px;
     color: white;
     text-decoration: none;
     
     text-align: center;
     margin: auto;
+
+    /* display: inline-block;
+    vertical-align: top; */
+}
+
+/* ---- PHOTOGRAPHER LIST ---- */
+/* move closer to top */
+.list-h2 {
+    display: flex;
+    grid-row: 1;
+    grid-column: 1/ span 3;
+    flex-direction: column;
+    
+    margin-top: 10%;
+
+    font-size: 14px;
+    letter-spacing: 9px;
+}
+
+/* remove bullets */
+/* print 3 in a row */
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 415px) {
+    .base-h1 {
+        font-size: 25px;
+        letter-spacing: 6px;
+        margin-top: 13%;
+        width: 100%;
+    }
+
+    .user-info {
+        font-size: 8px;
+        margin-top: 13px;
+        margin-right: 2px;
+        width: 100%;
+    }
+
+    .log-form {
+        width: 100%;
+        height: 230px;
+        font-size: 8px;
+        font-variant: small-caps;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .base-h1 {
+        font-size: 38px;
+        letter-spacing: 10px;
+        margin-top: 13%;
+        width: 100%;
+    }
+
+    .user-info {
+        font-size: 12px;
+        margin-top: 13px;
+        margin-right: 2px;
+        width: 100%;
+    }
+
+    .log-form {
+        display: flex;
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 3;
+        flex-direction: column;
+
+        width: 400px;
+        height: 250px;
+        padding: 30px;
+        margin-top: 25%;
+        /* height: 230px; */
+        font-size: 12px;
+        font-variant: small-caps;
+    }
 }
