@@ -2,9 +2,25 @@
 
 {% block content %}
 <div class="landing-div">
-  <!-- <h2>Homepage</h2> -->
-  <!-- <h6>this is landing</h6> -->
-  <!-- <p>Hello {{ user.username }}!</p> -->
+  <hr>
+  <p>Hey {{ user.username }}!</p>
+  <h6>*put carousel here*</h6>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-group"><a href="{% url 'photographer_list' %}">browse all
+        photographers</a></button>
+  </div>
+  <div class="btn-group"></div>
+    <button type="button" class="btn btn-group"><a href="{% url 'shoot_list' %}">browse all sessions</a></button>
+  </div>
 </div>
 {% endblock %}
 
+
+<!-- <a href="{% url 'photographer_list' %}">
+      <button type="button" class="btn btn-group">browse all photographers</button>
+    </a>
+    <br/>
+    <a href="{% url 'shoot_list' %}">
+      <button type="button" class="btn btn-group">browse all sessions</button>
+    </a> -->

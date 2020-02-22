@@ -1,21 +1,23 @@
 <!-- accounts/templates/accounts/login.html -->
-{% extends 'tailored/base.html' %} 
+{% extends 'tailored/base.html' %}
 
-{% block content %} 
+{% block content %}
 
-{% if form.errors %}
-<p>Your username and password do not match. Please try again.</p>
-{% endif %}
+<div class="log-form">
+  {% if form.errors %}
+  <p>Your username and password do not match. Please try again.</p>
+  {% endif %}
 
-{% if next %}
+  {% if next %}
   <p>Please login to see this page.</p>
-{% endif %}
+  {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} {{form.as_p}}
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %} {{form.as_p}}
 
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+</div>
 
 {% endblock %}
