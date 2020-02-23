@@ -1,17 +1,16 @@
 .base-body {
-    /* padding-top: 10%; */
     background-color: black;
     color: white;
     font-family: 'Tenor Sans';
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0px;
 }
 
 .base-h1 {
@@ -20,7 +19,8 @@
     grid-column: 1/ span 3;
     flex-direction: column;
 
-    margin-top: 5%;
+    margin-top: 4%;
+    margin-bottom: 0;
 
     font-family: 'Syncopate';
     text-transform: uppercase;
@@ -58,7 +58,6 @@
     color: white;
 }
 
-
 /* ---- LOG  ---- */
 .log-form {
     display: flex;
@@ -87,36 +86,40 @@ input {
 }
 
 /* ---- LANDING PAGE ---- */
-/* still trying to inline your buttons... 2/22 5:45 */
+/* still trying to inline your buttons... 2/22 */
 .landing-div {
     display: flex;
-    grid-row: 2 / span 3;
+    grid-row: 1 / span 3;
     grid-column: 1 / span 3;
     flex-direction: column;
-
-    /* border: solid white 2px; */
+    margin-top: 6%;
 }
 
 .btn-group {
     display: flex;
     grid-row: 3;
     grid-column: 1 / span 3;
-    flex-direction: column;
-
+    flex-direction: column; 
+    padding: 3px 10px;
+    margin: auto;
     background-color: black;
     border: solid white 2px;
     color: white;
     text-decoration: none;
-    
     text-align: center;
-    margin: auto;
+    font-variant: small-caps;
+    font-size: 14px;
+}
 
-    /* display: inline-block;
-    vertical-align: top; */
+#carousel {
+    margin: 5px auto;
+    display: grid;
+    grid-row: 1;
+    grid-column: 1/ span 3;
+    flex-direction: column;
 }
 
 /* ---- PHOTOGRAPHER LIST ---- */
-/* move closer to top */
 .list-h2 {
     display: flex;
     grid-row: 1;
@@ -125,47 +128,104 @@ input {
     margin-top: 10%;
 
     font-size: 14px;
-    letter-spacing: 9px;
+    letter-spacing: 18px;
 }
 
-/* get all cards to print 3 wide, flow down */
-/* .card-body{
+.list-h4 {
+    margin-top: 20%;
+    font-size: 14px;
+    letter-spacing: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.cards {
     display: flex;
     grid-row: 1;
     grid-column: 1 / span 3;
     flex-direction: column;
     margin-top: 15%;
-
-    border: solid white 2px;
-} */
-/* print 3 in a row */
-/* ul {
     list-style-type: none;
-} */
+}
 
- /* to lay list like a grid: */
-/* li {
+ul {
+    list-style-type: none;
+    display: inline-block;
+} 
+
+.list-li {
     display: inline-block;
     vertical-align: top;
-    width: 200px;
-    height: 200px;
-    padding: 50px;
-    margin: auto;
-    border: solid white 1px;
-} */
+    /* width: 750px;
+    height: 500px; */
+    padding: 10px;
+    margin: 20px auto;
+    /* border: solid white 1px; */
+}
+
+.photo {
+    height: 360px;
+    width: 640px;
+}
 
 /* ---- PHOTOGRAPHER DETAIL ---- */
-h2 { 
+.detail-h2 { 
+    display: flex;
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    flex-direction: column;
+    padding-top: 40px;
+    /* margin-top: 25%; */
     text-align: center;
-    margin: auto;
     font-size: 18px;
+    font-variant: small-caps;
+    letter-spacing: 16px;
 }
 
 .detail-h4 {
+    display: flex;
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-top: 25%;
+    text-align: center;
+
     text-align: center;
     margin: auto;
     font-size: 14px;
 }
+
+.detail-h5 {
+    display: flex;
+    grid-row: 5;
+    grid-column: 1 / span 3;
+    flex-direction: column;
+
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+}
+
+.detail-button {
+    display: flex;
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    flex-direction: column;
+    
+    text-align: center;
+    border: solid white 2px;
+    background-color: black;
+}
+
+.detail-photo {
+    display: flex;
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    flex-direction: column;
+}
+
+
 
 @media screen and (max-width: 415px) {
     .base-h1 {
@@ -187,6 +247,11 @@ h2 {
         height: 230px;
         font-size: 8px;
         font-variant: small-caps;
+    }
+
+    .img {
+        width: 50%;
+        height: 50%;
     }
 }
 

@@ -1,21 +1,28 @@
-{% extends 'tailored/base.html' %} 
+{% extends 'tailored/base.html' %}
 {% block content %}
-    <h2 class="detail-h2">{{ photographer.name }} </h2>
-    <br/>
-    <h4 class="detail-h4">{{ photographer.name }} | {{ photographer.location }}</h4>
-    <h4 class="detail">{{ photographer.category }} | {{ photographer.price }}</h4>
-    <br/>
-    <img src="{{ photographer.avatar }}" alt="" class="photo"> <br/>
-    <!-- <h4><a href="{{ photographer.bio_url }}">Bio</a></h4> -->
 
-    <h4 class="detail-h4"></h4>View all <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h4> <br/>
-    <ul>
-        {% for shoot in photographer.shoots.all %}
-            <li>
-                <a href="{% url 'shoot_detail' pk=shoot.pk %}">{{ shoot.name }} ({{ shoot.photo_url }})</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <button type="button" class="btn btn-group"><a href="{% url 'photographer_list' %}">browse all
-        photographers</a></button>
+<h2 class="detail-h2">{{ photographer.name }} </h2>
+<br />
+<h4 class="detail-h4">{{ photographer.name }} | {{ photographer.location }}</h4>
+<br />
+<br />
+<h4 class="detail-h4">{{ photographer.category }} | {{ photographer.price }}</h4>
+<br />
+<img src="{{ photographer.avatar }}" alt="" class="photo"> <br />
+<!-- <h4><a href="{{ photographer.bio_url }}">Bio</a></h4> -->
+
+
+<ul class="detail-photo">
+    {% for shoot in photographer.shoots.all %}
+    <li>
+        <a href="{% url 'shoot_detail' pk=shoot.pk %}">{{ shoot.name }} ({{ shoot.photo_url }})</a>
+    </li>
+    {% endfor %}
+</ul>
+<h5 class="detail-h5">View all <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h5> <br />
+
+<button type="button" class="btn btn-group detail-button"><a href="{% url 'photographer_list' %}">browse all
+        sessions</a></button>
+
+
 {% endblock %}
