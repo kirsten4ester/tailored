@@ -1,8 +1,27 @@
-{% extends 'tailored/base.html' %} 
+{% extends 'tailored/base.html' %}
 {% block content %}
 
-    <h2 class="list-h2">Tailored Photographers </h2>
-    <ul>
+<h2 class="list-h2">Tailored Photographers </h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10" style="background-color:black;">
+
+
+            {% for photographer in photographers %}
+            <div class="card-body">
+            
+                <img src="{{photographer.avatar}}" alt="" class="photo" /> <br />
+                <a href="{% url 'photographer_detail' pk=photographer.id %}">{{ photographer.name }}</a><br />
+
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+<!-- <ul>
         {% for photographer in photographers %}
             <li>
                 <img src="{{photographer.avatar}}" alt="" class="photo" /> <br />
@@ -10,5 +29,35 @@
 
             </li>
         {% endfor %}
-    </ul>
+    </ul> -->
 {% endblock %}
+<!-- 
+<div class="col-md-6">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <ul>
+                {% for photographer in photographers %}
+                <li>
+                    <img src="{{photographer.avatar}}" alt="" class="photo" /> <br />
+                    <a href="{% url 'photographer_detail' pk=photographer.id %}">{{ photographer.name }}</a><br />
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="col-md-6">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+
+            {% for photographer in photographers %}
+
+            <img src="{{photographer.avatar}}" alt="" class="photo" /> <br />
+            <a href="{% url 'photographer_detail' pk=photographer.id %}">{{ photographer.name }}</a><br />
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div> -->

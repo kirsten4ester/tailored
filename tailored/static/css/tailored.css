@@ -32,7 +32,6 @@
     color: white;
 }
 
-/* force to top/right  2/22 5:45 */
 .user-info {
     display: inline-block;
     grid-row: 1;
@@ -61,7 +60,6 @@
 
 
 /* ---- LOG  ---- */
-/* your "login" button disappeared 2/22 5:45*/
 .log-form {
     display: flex;
     grid-row: 2 / span 3;
@@ -124,23 +122,37 @@ input {
     grid-row: 1;
     grid-column: 1/ span 3;
     flex-direction: column;
-    
     margin-top: 10%;
 
     font-size: 14px;
     letter-spacing: 9px;
 }
 
-/* remove bullets */
-/* print 3 in a row */
-ul {
-    list-style-type: none;
-}
+/* get all cards to print 3 wide, flow down */
+.card-body{
+    display: flex;
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    flex-direction: column;
+    /* margin-top: 15%; */
 
-li {
+    border: solid white 2px;
+}
+/* print 3 in a row */
+/* ul {
+    list-style-type: none;
+} */
+
+ /* to lay list like a grid: */
+/* li {
     display: inline-block;
     vertical-align: top;
-}
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    margin: auto;
+    border: solid white 1px;
+} */
 
 @media screen and (max-width: 415px) {
     .base-h1 {
