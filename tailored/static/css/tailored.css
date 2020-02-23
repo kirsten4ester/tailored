@@ -94,7 +94,7 @@ input {
     grid-column: 1 / span 3;
     flex-direction: column;
 
-    border: solid white 2px;
+    /* border: solid white 2px; */
 }
 
 .btn-group {
@@ -129,15 +129,15 @@ input {
 }
 
 /* get all cards to print 3 wide, flow down */
-.card-body{
+/* .card-body{
     display: flex;
     grid-row: 1;
     grid-column: 1 / span 3;
     flex-direction: column;
-    /* margin-top: 15%; */
+    margin-top: 15%;
 
     border: solid white 2px;
-}
+} */
 /* print 3 in a row */
 /* ul {
     list-style-type: none;
@@ -153,6 +153,19 @@ input {
     margin: auto;
     border: solid white 1px;
 } */
+
+/* ---- PHOTOGRAPHER DETAIL ---- */
+h2 { 
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+
+.detail-h4 {
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+}
 
 @media screen and (max-width: 415px) {
     .base-h1 {
