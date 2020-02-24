@@ -1,5 +1,9 @@
 <!-- accounts/templates/accounts/logout.html -->
 {% extends 'tailored/base.html' %} {% block content %}
-<p>Logged out!</p>
-<a href="{% url 'login' %}">Click here to login again.</a>
+<div class="logout">
+    <p class="log-p">you are logged out. </p>
+    <br />
+    <h4 class="log-h4"> <a href="{% url 'login' %}">| log in again |</a> </h4>
+</div>
+
 {% endblock %}
