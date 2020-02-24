@@ -1,6 +1,6 @@
 {% extends "tailored/base.html" %} {% block content %}
 
-<div class="log-form">
+<div class="signup-form">
   <form method="post" action="{% url 'signup' %}">
     {% csrf_token %} {{form.as_p}}
 
