@@ -1,6 +1,7 @@
 .base-body {
     background-color: black;
     color: white;
+    /* font-family: 'Red Hat Text', ; */
     font-family: 'Tenor Sans';
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -23,6 +24,7 @@
     margin-bottom: 0;
 
     font-family: 'Syncopate';
+    /* font-family: 'Barlow Condensed' */
     text-transform: uppercase;
     text-align: center;
     font-weight: lighter;
@@ -43,9 +45,8 @@
     color: white;
 }
 
-/* TRYING to remove text decoration  2/22 5:45 */
 .user-info a {
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 10px;
     color: white;
     text-align: center;
@@ -54,8 +55,8 @@
 }
 
 .user-info a:link, a:visited, a:hover, a:active{
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important;
+    color: white !important;
 }
 
 /* ---- LOG  ---- */
@@ -116,7 +117,8 @@ input {
     display: grid;
     grid-row: 1;
     grid-column: 1/ span 3;
-    flex-direction: column;
+    flex-direction: column;    
+
 }
 
 /* ---- PHOTOGRAPHER LIST ---- */
@@ -129,6 +131,7 @@ input {
 
     font-size: 14px;
     letter-spacing: 18px;
+
 }
 
 .list-h4 {
@@ -144,7 +147,7 @@ input {
     grid-row: 1;
     grid-column: 1 / span 3;
     flex-direction: column;
-    margin-top: 15%;
+    margin-top: 5%;
     list-style-type: none;
 }
 
@@ -156,11 +159,8 @@ ul {
 .list-li {
     display: inline-block;
     vertical-align: top;
-    /* width: 750px;
-    height: 500px; */
     padding: 10px;
     margin: 20px auto;
-    /* border: solid white 1px; */
 }
 
 .photo {
