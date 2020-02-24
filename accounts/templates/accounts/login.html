@@ -9,8 +9,9 @@
   {% endif %}
 
   {% if next %}
-  <p class="log-p">Please login to see this page.</p>
+  <p class="log-p">Please login to see this page.</p> <br />
   {% endif %}
+
 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %} {{form.as_p}}
@@ -18,6 +19,8 @@
     <input type="submit" value="login" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
+  <h6 class="log-h6"><a href="{% url 'signup' %}">New here? Sign up to get tailored.</a></h6><br />
+
 </div>
 
 {% endblock %}
