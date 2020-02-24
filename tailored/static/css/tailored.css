@@ -131,7 +131,6 @@ input {
 
     font-size: 14px;
     letter-spacing: 18px;
-
 }
 
 .list-h4 {
@@ -175,7 +174,7 @@ ul {
     grid-column: 1 / span 3;
     flex-direction: column;
     padding-top: 40px;
-    /* margin-top: 25%; */
+
     text-align: center;
     font-size: 18px;
     font-variant: small-caps;
@@ -184,21 +183,21 @@ ul {
 
 .detail-h4 {
     display: flex;
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 1 / span 3;
     flex-direction: column;
-    padding-top: 40px;
-    margin-top: 25%;
-    text-align: center;
-
-    text-align: center;
+    padding-top: 80px;
+    /* margin-top: 0; */
     margin: auto;
+
+    line-height: 2em;
+    text-align: center;
     font-size: 14px;
 }
 
 .detail-h5 {
-    display: flex;
-    grid-row: 5;
+    display: inline-block;
+    grid-row: 4;
     grid-column: 1 / span 3;
     flex-direction: column;
 
@@ -209,13 +208,10 @@ ul {
 
 .detail-button {
     display: flex;
-    grid-row: 2;
+    grid-row: 4 !important;
     grid-column: 1 / span 3;
     flex-direction: column;
-    
-    text-align: center;
-    border: solid white 2px;
-    background-color: black;
+    margin-top: 10%;
 }
 
 .detail-photo {
@@ -224,8 +220,6 @@ ul {
     grid-column: 1 / span 3;
     flex-direction: column;
 }
-
-
 
 @media screen and (max-width: 415px) {
     .base-h1 {
@@ -252,6 +246,10 @@ ul {
     .img {
         width: 50%;
         height: 50%;
+    }
+
+    .detail-button {
+        margin-top: 20%;
     }
 }
 
@@ -283,5 +281,9 @@ ul {
         /* height: 230px; */
         font-size: 12px;
         font-variant: small-caps;
+    }
+
+    .detail-button {
+        margin-top: 20%;
     }
 }

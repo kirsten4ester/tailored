@@ -3,12 +3,13 @@
 
 <h2 class="detail-h2">{{ photographer.name }} </h2>
 <br />
-<h4 class="detail-h4">{{ photographer.name }} | {{ photographer.location }}</h4>
+<h4 class="detail-h4"> {{ photographer.location }} <br />{{ photographer.category }} | {{ photographer.price }}</h4>
+
+<!-- 
 <br />
-<br />
-<h4 class="detail-h4">{{ photographer.category }} | {{ photographer.price }}</h4>
-<br />
-<img src="{{ photographer.avatar }}" alt="" class="photo"> <br />
+<h4 class="detail-h4"></h4>
+<br /> -->
+<!-- <img src="{{ photographer.avatar }}" alt="" class="photo"> <br /> -->
 <!-- <h4><a href="{{ photographer.bio_url }}">Bio</a></h4> -->
 
 
@@ -19,9 +20,10 @@
     </li>
     {% endfor %}
 </ul>
-<h5 class="detail-h5">View all <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h5> <br />
+<h5 class="detail-h5">View all of <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h5> <br />
 
-<button type="button" class="btn btn-group detail-button"><a href="{% url 'photographer_list' %}">browse all
-        sessions</a></button>
-
+<div class="btn-group detail-button">
+    <button type="button" class="btn btn-group"><a href="{% url 'photographer_list' %}">browse all tailored
+            sessions</a></button>
+</div>
 {% endblock %}
