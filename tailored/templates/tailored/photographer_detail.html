@@ -9,7 +9,7 @@
 <br />
 <h4 class="detail-h4"></h4>
 <br /> -->
-<!-- <img src="{{ photographer.avatar }}" alt="" class="photo"> <br /> -->
+
 <!-- <h4><a href="{{ photographer.bio_url }}">Bio</a></h4> -->
 
 
@@ -20,10 +20,11 @@
     </li>
     {% endfor %}
 </ul>
-<h5 class="detail-h5">View all of <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h5> <br />
+<!-- <h5 class="detail-h5">View all of <a href="{% url 'shoot_list' %}"></a>{{ photographer.name }}'s sessions</h5> <br /> -->
+<img src="{{ photographer.avatar }}" alt="" class="photo detail-photo"> <br />
 
-<div class="btn-group detail-button">
-    <button type="button" class="btn btn-group"><a href="{% url 'photographer_list' %}">browse all tailored
+<div class="button-box col-lg-12 detail-button">
+    <button type="button" class="btn btn-outline-light bg-black"><a href="{% url 'photographer_list' %}">browse all tailored
             sessions</a></button>
 </div>
 {% endblock %}
