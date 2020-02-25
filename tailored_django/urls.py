@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin', admin.site.urls),
     path('', include('tailored.urls')),
     path('', include('accounts.urls')),
+    path('', include('search_app.urls')),
 ]

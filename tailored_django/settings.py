@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'tailored',
     'django_extensions',
     'accounts',
+    'search_app',
 ]
 
 MIDDLEWARE = [

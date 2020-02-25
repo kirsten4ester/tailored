@@ -176,6 +176,12 @@ input {
 
 }
 
+/* ---- SEARCH ---- */
+.boot-form {
+    margin-top: 5rem;
+}
+
+
 /* ---- PHOTOGRAPHER LIST ---- */
 .list-h2 {
     display: flex;

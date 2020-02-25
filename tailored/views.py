@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
-from .models import Photographer, Shoot
-from .forms import PhotographerForm, ShootForm
+from .models import Photographer, Category, Shoot
+from .forms import PhotographerForm, ShootForm, SearchForm
 from django.contrib.auth.decorators import login_required
 
 def landing(request):
