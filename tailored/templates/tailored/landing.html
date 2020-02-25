@@ -18,7 +18,6 @@
         <li data-target="#carousel" data-slide-to="5"></li>
       </ol>
       <!-- The slideshow -->
-      <!-- large thumbnails: -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="https://i.imgur.com/IZE7A6Dh.jpg" alt="img1">
@@ -41,31 +40,24 @@
     <br />
     <!-- bottom browse buttons -->
     <div class="btn-group">
-      <button type="button" class="btn btn-group"><a href="{% url 'photographer_list' %}">browse all sessions</a></button>
+      <button type="button" class="btn btn-group"><a href="{% url 'photographer_list' %}">browse tailored shots</a></button>
     </div>
-    <div class="btn-group">
-      <button type="button" class="btn btn-group"><a href="{% url 'photographer_search' %}">tailored to you</a></button>
+    <br />
+    <!-- <div class="btn-group">
+      <button type="button" class="btn btn-group"><a href="{% url 'photographer_search' %}">tailored to {{ user.username }}</a></button>
     </div>
-    <!-- <div class="btn-group"></div>
-    <button type="button" class="btn btn-group"><a href="{% url 'shoot_list' %}">browse all sessions</a></button>
-  </div> -->
+    <br /> -->
+
   </div>
 </body>
 {% endblock %}
 
-
-<!-- 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://i.imgur.com/IZE7A6Dh.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/lQjA3vJl.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/i8OX6OVl.jpg" alt="Third slide">
-    </div>
-  </div>
-</div>
-<br /> -->
+<!-- <nav class="btn-group btn-group-justified">
+  <a href="{% url 'photographer_list' %}">
+    <button className="btn">browse all categories</button>
+  </a>
+  <br />
+  <a href="{% url 'photographer_search' %}">
+    <button className="btn">tailored to {{ user.username }}</button>
+  </a>
+</nav> -->

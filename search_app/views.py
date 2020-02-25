@@ -8,7 +8,7 @@ def is_valid_queryparam(param):
 @login_required
 def photographer_search(request):
     qs = Photographer.objects.all()
-    photographer = photographer.object.all()
+    category = category.object.all()
     location_contains_query = request.GET.get('location_contains')
     category = request.GET.get('category')
     price = request.GET.get('price')
