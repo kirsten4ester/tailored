@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Tailored is a client to photographer site built to match clients to their perfect photographer based on location, price point, and expertise. Based on these criteria, users will be able to search the registered database based on their needs. Users will also be able to "search all" to view all available photographers beyond any set criteria. This will be developed using Python and Django.  
+Tailored is a client to photographer site built to match clients to their perfect photographer based on location, price point, and expertise. Based on these criteria, users will be able to search the registered database based on their needs. Users will also be able to "search all" to view all available photographers beyond any set criteria. This will be developed using Python/ Django.  
 
 ## Project Links
 - [Tailored Shots](https://tailoredshots.herokuapp.com/)
@@ -50,8 +50,13 @@ Tailored is a client to photographer site built to match clients to their perfec
 | Book photographer |       Clients can contact photographer and book with photographer through page.       |
 
 ## Architecture:
-APP 1: Tailored
-models: Photographer, Shoots
+APP 1: tailored
+models: Photographer, Shoots, Category
+
+APP 2: accounts
+
+APP 3: search_app
+
 
 ## Time Frames
 
@@ -73,5 +78,5 @@ models: Photographer, Shoots
 - Django 
 
 ## Additional Libraries
-- Bootstrap / Django Crispy Forms
+- Bootstrap 
 - ElasticSearch 

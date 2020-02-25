@@ -1,14 +1,16 @@
 from django.shortcuts import render
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
+from tailored.models import Category
+
 
 def is_valid_queryparam(param):
     return param != '' and param is not None
 
 @login_required
 def photographer_search(request):
-    qs = Photographer.objects.all()
-    category = category.object.all()
+    qs = Category.objects.all()
+    category = Category.objects.all()
     location_contains_query = request.GET.get('location_contains')
     category = request.GET.get('category')
     price = request.GET.get('price')
@@ -25,4 +27,4 @@ def photographer_search(request):
         'category': category,
         'price': price,
     }
-    return render(request, "search_form.html", context)
+    return render(request, "search_app/photographer_search.html", context)
